@@ -4,18 +4,22 @@
 
 工作日每天一道大厂前端面试题，一年后再回头，会感谢曾经努力的自己！
 
+[线上版本阅读更流畅，点击阅读](https://muyiy.cn/question/)
+
 <br/>
 
 
 
 
 ## 今日面试题
+2019-08-29
 
-2019-07-11
+> 第 133 题：用 setTimeout 实现 setInterval，阐述实现的效果与 setInterval 的差异
+>
 
-> 第 103 题：模拟实现一个 localStorage
 
-解析：[第 103 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/166)
+
+解析：[第 133 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/259)
 
 <br/>
 
@@ -23,80 +27,150 @@
 
 
 ## 本周汇总
+2019-08-27
 
-2019-07-10
-
-> 第 102 题：不用加减乘除运算符，求整数的7倍
-
-解析：[第 102 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/161)
-
-<br/>
+> 第 132 题：实现一个 Dialog 类，Dialog可以创建 dialog 对话框，对话框支持可拖拽（腾讯）
 
 
 
-2019-07-09
-
-> 第 101 题：修改以下 print 函数，使之输出 0 到 99，或者 99 到 0
->
-> 要求：
->
-> 1、只能修改 `setTimeout` 到 `Math.floor(Math.random() * 1000` 的代码
->
-> 2、不能修改 `Math.floor(Math.random() * 1000`
->
-> 3、不能使用全局变量
->
-> ```js
-> function print(n){
->   setTimeout(() => {
->     console.log(n);
->   }, Math.floor(Math.random() * 1000));
-> }
-> for(var i = 0; i < 100; i++){
->   print(i);
-> }
-> ```
-
-
-
-公司：头条
-
-解析：[第 101 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/158)
+解析：[第 132 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/257)
 
 <br/>
 
 
 
-2019-07-08
+2019-08-26
 
-> 第 100 题：请写出如下代码的打印结果
+> 第 131 题：接口如何防刷
+
+
+
+解析：[第 131 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/254)
+
+<br/>
+
+
+
+2019-08-23
+
+> 第 130 题：输出以下代码执行结果，大致时间就好（不同于上题）
 >
 > ```js
-> function Foo() {
->     Foo.a = function() {
->         console.log(1)
->     }
->     this.a = function() {
->         console.log(2)
->     }
+> function wait() {
+>   return new Promise(resolve =>
+>     setTimeout(resolve, 10 * 1000)
+>   )
 > }
-> Foo.prototype.a = function() {
->     console.log(3)
+> 
+> async function main() {
+>   console.time();
+>   await wait();
+>   await wait();
+>   await wait();
+>   console.timeEnd();
 > }
-> Foo.a = function() {
->     console.log(4)
-> }
-> Foo.a();
-> let obj = new Foo();
-> obj.a();
-> Foo.a();
+> main();
 > ```
 
 
 
-公司：京东
+解析：[第 130 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/253)
 
-解析：[第 100 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/155)
+<br/>
+
+
+
+2019-08-22
+
+> 第 129 题：输出以下代码执行结果
+>
+> ```js
+> function wait() {
+>   return new Promise(resolve =>
+>     setTimeout(resolve, 10 * 1000)
+>   )
+> }
+> 
+> async function main() {
+>   console.time();
+>   const x = wait();
+>   const y = wait();
+>   const z = wait();
+>   await x;
+>   await y;
+>   await z;
+>   console.timeEnd();
+> }
+> main();
+> ```
+
+
+
+解析：[第 129 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/251)
+
+<br/>
+
+
+
+2019-08-20
+
+> 第 128 题：Http 状态码 301 和 302 的应用场景分别是什么
+
+
+
+解析：[第 128 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/249)
+
+<br/>
+
+
+
+2019-08-19
+
+> 第 127 题：如何用 css 或 js 实现多行文本溢出省略效果，考虑兼容性
+
+
+
+解析：[第 127 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/246)
+
+
+
+2019-08-15
+
+> 第 126 题：扑克牌问题
+>
+> 有一堆扑克牌，将牌堆第一张放到桌子上，再将接下来的牌堆的第一张放到牌底，如此往复；
+>
+> 最后桌子上的牌顺序为： (牌底) 1,2,3,4,5,6,7,8,9,10,11,12,13 (牌顶)；
+>
+> 问：原来那堆牌的顺序，用函数实现。
+
+
+
+解析：[第 126 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/245)
+
+<br/>
+
+
+
+2019-08-13
+
+> 第 125 题：如何将`[{id: 1}, {id: 2, pId: 1}, ...]` 的重复数组（有重复数据）转成树形结构的数组 `[{id: 1, child: [{id: 2, pId: 1}]}, ...]` （需要去重）
+
+
+
+解析：[第 125 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/243)
+
+<br/>
+
+
+
+2019-08-12
+
+> 第 124 题：永久性重定向（301）和临时性重定向（302）对 SEO 有什么影响
+
+
+
+解析：[第 124 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/241)
 
 <br/>
 
@@ -112,7 +186,7 @@
 
 ## 半月刊
 
-- [前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.im/post/5d23e750f265da1b855c7bbe)
+- [前端 100 问：能搞懂 80% 的请把简历给我](https://github.com/yygmind/blog/issues/43)
 - [【半月刊 1】前端高频面试题及答案汇总](https://juejin.im/post/5c6977e46fb9a049fd1063dc)
 - [【半月刊 2】前端高频面试题及答案汇总](https://juejin.im/post/5c7bd72ef265da2de80f7f17)
 - [【半月刊 3】前端高频面试题及答案汇总](https://juejin.im/post/5c9ac3f66fb9a070e056718f)
@@ -122,7 +196,7 @@
 
 
 
-## 交流
+## 联系我
 
 进阶系列文章汇总如下，觉得不错点个 star，欢迎 **加群** 互相学习。
 
