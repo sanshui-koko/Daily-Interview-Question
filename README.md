@@ -1,6 +1,6 @@
 # Daily-Interview-Question
 
-加入前端「壹题」学习小组，尽在公众号「高级前端进阶」，进阶共勉之！
+加入「前端面试互助群」学习小组，搜索公众号「高级前端进阶」，关注即可加入！
 
 工作日每天一道大厂前端面试题，一年后再回头，会感谢曾经努力的自己！
 
@@ -10,169 +10,405 @@
 
 
 
+[推荐一个不错的前端算法系列，点击查看](https://github.com/sisterAn/JavaScript-Algorithms)
+
+<br/>
+
+
+
+推荐扫码使用微信小程序，除了本项目之外，还囊括了算法题、选择题等多种类型题目和详细解析
+
+记住我们的 Slogan：上下班路上刷一点，半年突击进大厂
+
+
+
+<img src="http://resource.muyiy.cn/image/20200106214930.jpg" height="250px">
+
+<br/>
+
+
+
 
 ## 今日面试题
-2019-08-29
 
-> 第 133 题：用 setTimeout 实现 setInterval，阐述实现的效果与 setInterval 的差异
+第 162 题：实现对象的 Map 函数类似 Array.prototype.map
+
+解析：[第 162 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/431)
+
+<br/>
+
+
+
+
+## 最近汇总
+
+第 161 题：用最精炼的代码实现数组非零非负最小值 index 
+
+```js
+// 例如：[10,21,0,-7,35,7,9,23,18] 输出 5, 7 最小
+function getIndex(arr){
+      let index=null;
+      ...
+      return index;
+}
+```
+
+
+解析：[第 161 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/421)
+
+<br/>
+
+
+
+第 160 题：输出以下代码运行结果，为什么？如果希望每隔 1s 输出一个结果，应该如何改造？注意不可改动 square 方法
+
+```js
+const list = [1, 2, 3]
+const square = num => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(num * num)
+    }, 1000)
+  })
+}
+
+function test() {
+  list.forEach(async x=> {
+    const res = await square(x)
+    console.log(res)
+  })
+}
+test()
+```
+
+
+
+解析：[第 160 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/389)
+
+<br/>
+
+
+
+第 159 题：实现 `Promise.retry`，成功后 `resolve` 结果，失败后重试，尝试超过一定次数才真正的 `reject`
+
+
+
+解析：[第 159 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/387)
+
+<br/>
+
+
+
+第 158 题：如何模拟实现 Array.prototype.splice
+
+
+
+解析：[第 158 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/384)
+
+<br/>
+
+
+
+第 157 题：浏览器缓存 ETag 里的值是怎么生成的
+
+解析：[第 157 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/383)
+
+<br/>
+
+
+
+第 156 题：求最终 left、right 的宽度
+
+```js
+<div class="container">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 600px;
+    height: 300px;
+    display: flex;
+  }
+  .left {
+    flex: 1 2 300px;
+    background: red;
+  }
+  .right {
+    flex: 2 1 200px;
+    background: blue;
+  }
+</style>
+```
+
+注：此题和 155 题 left、right 样式有些不同
+
+
+
+解析：[第 156 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/382)
+
+<br/>
+
+
+
+第 155 题：求最终 left、right 的宽度
+
+```js
+<div class="container">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 600px;
+    height: 300px;
+    display: flex;
+  }
+  .left {
+    flex: 1 2 500px;
+    background: red;
+  }
+  .right {
+    flex: 2 1 400px;
+    background: blue;
+  }
+</style>
+```
+
+
+
+解析：[第 155 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/381)
+
+<br/>
+
+
+
+第 154 题：弹性盒子中 flex: 0 1 auto 表示什么意思
+
+解析：[第 154 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/380)
+
+<br/>
+
+
+
+第 153 题：实现一个批量请求函数 multiRequest(urls, maxNum)
+
+ 要求如下：
+
+1. 要求最大并发数 maxNum
+
+2. 每当有一个请求返回，就留下一个空位，可以增加新的请求
+3. 所有请求完成后，结果按照 urls 里面的顺序依次打出
+
+
+
+解析：[第 153 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/378)
+
+<br/>
+
+
+
+2019-12-31
+
+> 第 152 题：实现一个 normalize 函数，能将输入的特定的字符串转化为特定的结构化数据
+
+
+
+解析：[第 152 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/331)
+
+<br/>
+
+
+
+
+2019-11-25
+
+> 第 151 题：用最简洁代码实现 indexOf 方法
 >
 
 
 
-解析：[第 133 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/259)
+解析：[第 151 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/321)
 
 <br/>
 
 
+2019-11-21
 
-
-## 本周汇总
-2019-08-27
-
-> 第 132 题：实现一个 Dialog 类，Dialog可以创建 dialog 对话框，对话框支持可拖拽（腾讯）
-
-
-
-解析：[第 132 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/257)
-
-<br/>
-
-
-
-2019-08-26
-
-> 第 131 题：接口如何防刷
-
-
-
-解析：[第 131 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/254)
-
-<br/>
-
-
-
-2019-08-23
-
-> 第 130 题：输出以下代码执行结果，大致时间就好（不同于上题）
+> 第 150 题：二分查找如何定位左边界和右边界
 >
-> ```js
-> function wait() {
->   return new Promise(resolve =>
->     setTimeout(resolve, 10 * 1000)
->   )
-> }
-> 
-> async function main() {
->   console.time();
->   await wait();
->   await wait();
->   await wait();
->   console.timeEnd();
-> }
-> main();
-> ```
+> 不使用JS数组API，查找有序数列最先出现的位置和最后出现的位置
 
 
 
-解析：[第 130 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/253)
+解析：[第 150 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/320)
 
 <br/>
 
 
 
-2019-08-22
+2019-11-12
 
-> 第 129 题：输出以下代码执行结果
->
-> ```js
-> function wait() {
->   return new Promise(resolve =>
->     setTimeout(resolve, 10 * 1000)
->   )
-> }
-> 
-> async function main() {
->   console.time();
->   const x = wait();
->   const y = wait();
->   const z = wait();
->   await x;
->   await y;
->   await z;
->   console.timeEnd();
-> }
-> main();
-> ```
+> 第 149 题：babel 怎么把字符串解析成 AST，是怎么进行词法/语法分析的？
 
-
-
-解析：[第 129 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/251)
+解析：[第 149 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/315)
 
 <br/>
 
 
 
-2019-08-20
+2019-11-01
 
-> 第 128 题：Http 状态码 301 和 302 的应用场景分别是什么
-
-
-
-解析：[第 128 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/249)
-
-<br/>
+> 第 148 题： webpack 中 loader 和 plugin 的区别是什么（平安）
 
 
 
-2019-08-19
-
-> 第 127 题：如何用 css 或 js 实现多行文本溢出省略效果，考虑兼容性
-
-
-
-解析：[第 127 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/246)
-
-
-
-2019-08-15
-
-> 第 126 题：扑克牌问题
->
-> 有一堆扑克牌，将牌堆第一张放到桌子上，再将接下来的牌堆的第一张放到牌底，如此往复；
->
-> 最后桌子上的牌顺序为： (牌底) 1,2,3,4,5,6,7,8,9,10,11,12,13 (牌顶)；
->
-> 问：原来那堆牌的顺序，用函数实现。
-
-
-
-解析：[第 126 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/245)
+解析：[第 148 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308)
 
 <br/>
 
 
 
-2019-08-13
+2019-10-31
 
-> 第 125 题：如何将`[{id: 1}, {id: 2, pId: 1}, ...]` 的重复数组（有重复数据）转成树形结构的数组 `[{id: 1, child: [{id: 2, pId: 1}]}, ...]` （需要去重）
+> 第 147 题：v-if、v-show、v-html 的原理是什么，它是如何封装的？
 
 
 
-解析：[第 125 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/243)
+解析：[第 147 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/307)
+
+<br/>
+
+
+
+2019-10-29
+
+> 第 146 题：Vue 中的 computed 和 watch 的区别在哪里（虾皮）
+
+
+
+解析：[第 146 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/304)
 
 <br/>
 
 
 
-2019-08-12
+2019-10-24
 
-> 第 124 题：永久性重定向（301）和临时性重定向（302）对 SEO 有什么影响
+> 第 145 题：前端项目如何找出性能瓶颈（阿里）
 
 
 
-解析：[第 124 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/241)
+解析：[第 145 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/300)
 
 <br/>
+
+
+
+2019-10-22
+
+> 第 144 题：手写二进制转 Base64（阿里）
+
+
+
+解析：[第 144 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/299)
+
+<br/>
+
+
+
+2019-10-21
+
+> 第 143 题：将 '10000000000' 形式的字符串，以每 3 位进行分隔展示 '10.000.000.000'
+
+
+
+解析：[第 143 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/296)
+
+<br/>
+
+
+
+2019-10-17
+
+> 第 142 题：（算法题）求多个数组之间的交集（阿里）
+
+
+
+解析：[第 142 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/293)
+
+<br/>
+
+
+
+2019-10-15
+
+> 第 141 题：Vue 中的 computed 是如何实现的（腾讯、平安）
+
+
+
+解析：[第 141 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/291)
+
+<br/>
+
+
+
+2019-10-14
+
+> 第 140 题：为什么 HTTP1.1 不能实现多路复用（腾讯）
+
+
+
+解析：[第 140 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/290)
+
+<br/>
+
+
+
+2019-09-17
+
+> 第 139 题：谈一谈 nextTick 的原理
+
+
+
+解析：[第 139 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/281)
+
+<br/>
+
+
+
+2019-09-11
+
+> 第 138 题：反转链表，每 k 个节点反转一次，不足 k 就保持原有顺序（哔哩哔哩）
+
+
+
+解析：[第 138 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/278)
+
+<br/>
+
+
+
+2019-09-04
+
+> 第 137 题：如何在 H5 和小程序项目中计算白屏时间和首屏时间，说说你的思路
+
+
+
+解析：[第 137 题](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/272)
+
+<br/>
+
 
 
 
@@ -204,4 +440,4 @@
 
 我是木易杨，公众号「高级前端进阶」作者，跟着我**每周重点攻克一个前端面试重难点**。接下来让我带你走进高级前端的世界，在进阶的路上，共勉！
 
-![image](https://github.com/yygmind/blog/raw/master/images/weixin_re.png)
+![image](http://resource.muyiy.cn/image/20200123162151.png)
